@@ -1,12 +1,12 @@
 function sumAll(arr) {
-  let newArr = arr.sort(function(a, b){ // sort by ascending
-    return a - b;
-  });  
-  let sum = 0;
-  for (let i = newArr[0]; i <= newArr[1]; i++){
-    sum += i;
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  let result = 0;
+  while (min <= max) {
+    result += min;
+    min++;
   }
-  return sum;
+  return result;
 }
 
 sumAll([1, 4]);
